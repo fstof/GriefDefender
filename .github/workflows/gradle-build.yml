@@ -29,10 +29,10 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Gradle
-      run: gradle build
+      run: sh ./gradlew build
       
     - name: Package the Jar
-      run: gradle jar
+      run: sh ./gradlew jar
       
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
